@@ -76,7 +76,7 @@ const Main = () => {
   };
 
   const onDownload = () => {
-    if (unit && trader) {
+    if (current.length && trader) {
       const table = document.getElementById("table-to-pdf");
       const pdf = new jsPDF("p", "pt", "a4");
 
@@ -92,10 +92,10 @@ const Main = () => {
           60
         );
         pdf.addImage(imgData, "PNG", 10, 80, imgWidth, imgHeight);
-        pdf.save("table.pdf");
+        pdf.save(`${total}-SPF`);
       });
     } else {
-      alert("Make sure you have set unit and trader");
+      alert("Make sure you have added birds and trader");
     }
   };
 
