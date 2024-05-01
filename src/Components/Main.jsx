@@ -71,6 +71,7 @@ const Main = () => {
         const copyArr = [...current];
         copyArr.splice(-1);
         setCurrent(copyArr);
+        nextId--;
       }
     }
   };
@@ -84,14 +85,14 @@ const Main = () => {
         const imgData = canvas.toDataURL("image/png");
         const imgWidth = 210;
         const imgHeight = (canvas.height * imgWidth) / canvas.width;
-        pdf.text("SISODE POULTRY FARM", 10, 20);
-        pdf.text(`Trader: ${trader}`, 10, 40);
+        pdf.text("SISODE POULTRY FARM", 200, 40);
+        pdf.text(`Trader: ${trader}`, 200, 80);
         pdf.text(
           `No. of units: ${current.length}      Total Birds: ${total}`,
-          10,
-          60
+          200,
+          110
         );
-        pdf.addImage(imgData, "PNG", 10, 80, imgWidth, imgHeight);
+        pdf.addImage(imgData, "PNG", 200, 140, imgWidth, imgHeight);
         pdf.save(`${total}-SPF`);
       });
     } else {

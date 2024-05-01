@@ -20,6 +20,12 @@
   /* color: white; */
 }
 
+.header {
+  margin: 35px;
+  font-weight: 700;
+  font-size: x-large;
+}
+
 .App-link {
   color: #61dafb;
 }
