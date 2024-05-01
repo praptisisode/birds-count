@@ -96,7 +96,7 @@ const Main = () => {
         pdf.save(`${total}-SPF`);
       });
     } else {
-      alert("Make sure you have added birds and trader");
+      alert("Make sure you have added birds and trader info");
     }
   };
 
