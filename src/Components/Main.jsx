@@ -20,7 +20,7 @@ const Main = () => {
   console.log(current);
 
   function formatDate(date) {
-    let datePart = [date.getMonth() + 1, date.getDate(), date.getFullYear()]
+    let datePart = [date.getDate(), date.getMonth() + 1, date.getFullYear()]
       .map((n, i) => n.toString().padStart(i === 2 ? 4 : 2, "0"))
       .join("-");
     let timePart = [date.getHours(), date.getMinutes(), date.getSeconds()]
